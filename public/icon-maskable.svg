@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="fmBgMask" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f2937" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+  <!-- Full-bleed background for maskable icon -->
+  <rect width="512" height="512" fill="url(#fmBgMask)"/>
+
+  <!-- Safe zone inner elements (within central 80%) -->
+  <circle cx="256" cy="256" r="144" fill="none" stroke="#38bdf8" stroke-width="6" stroke-opacity="0.35" stroke-dasharray="14 10"/>
+  <circle cx="256" cy="256" r="116" fill="none" stroke="#60a5fa" stroke-width="3" stroke-opacity="0.4"/>
+  <circle cx="256" cy="256" r="7" fill="#38bdf8"/>
+
+  <!-- Center Monogram "FM" sized safely within 360x360 circle -->
+  <text x="256" y="286" 
+        text-anchor="middle" 
+        fill="#ffffff" 
+        font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
+        font-size="124" 
+        font-weight="900" 
+        letter-spacing="-5">FM</text>
+  
+  <line x1="256" y1="84" x2="256" y2="104" stroke="#38bdf8" stroke-width="5" stroke-linecap="round"/>
+  <line x1="256" y1="408" x2="256" y2="428" stroke="#38bdf8" stroke-width="5" stroke-linecap="round"/>
+  <line x1="84" y1="256" x2="104" y2="256" stroke="#38bdf8" stroke-width="5" stroke-linecap="round"/>
+  <line x1="408" y1="256" x2="428" y2="256" stroke="#38bdf8" stroke-width="5" stroke-linecap="round"/>
+</svg>

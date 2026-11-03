@@ -15,6 +15,7 @@ import { TopicEditModal } from './components/TopicEditModal.tsx';
 import { DailyPlannerModal } from './components/DailyPlannerModal.tsx';
 import { ChecklistOverview } from './components/ChecklistOverview.tsx';
 import { SscDailyPlanner } from './components/SscDailyPlanner.tsx';
+import { OfflineIndicator } from './components/OfflineIndicator.tsx';
 import { CheckCircle2, AlertCircle, Info, Calendar } from 'lucide-react';
 
 export default function App() {
@@ -402,6 +403,8 @@ export default function App() {
           onClose={() => setIsDailyPlannerOpen(false)}
         />
       )}
+      {/* Offline Mode Indicator */}
+      <OfflineIndicator />
     </div>
   );
 }

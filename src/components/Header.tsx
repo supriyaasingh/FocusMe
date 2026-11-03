@@ -1,5 +1,6 @@
 import React from 'react';
 import { BookOpen, Calendar, CheckSquare, Download, Upload, Plus } from 'lucide-react';
+import { PWAInstallButton } from './PWAInstallButton.tsx';
 
 interface HeaderProps {
   activeTab: 'syllabus' | 'planner' | 'checklist';
@@ -20,7 +21,7 @@ export const Header: React.FC<HeaderProps> = ({
 }) => {
   return (
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-neutral-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4 md:gap-8">
         {/* Zone 1: Brand Wordmark */}
         <div className="flex items-center gap-3 shrink-0">
           <div className="w-8 h-8 rounded-lg bg-neutral-900 flex items-center justify-center text-white font-bold text-sm tracking-tight shadow-xs">
@@ -30,7 +31,7 @@ export const Header: React.FC<HeaderProps> = ({
             <span className="text-base font-bold tracking-tight text-neutral-900 whitespace-nowrap">
               FocusMe
             </span>
-            <span className="text-[11px] text-neutral-500 font-medium tracking-wide">
+            <span className="text-[11px] text-neutral-500 font-medium tracking-wide hidden sm:inline">
               Personal Learning Index & Roadmap
             </span>
           </div>
@@ -75,6 +76,8 @@ export const Header: React.FC<HeaderProps> = ({
 
         {/* Zone 3: Primary Action & Utilities */}
         <div className="flex items-center gap-2 shrink-0">
+          <PWAInstallButton variant="header" />
+
           <div className="hidden sm:flex items-center gap-1 border-r border-neutral-200 pr-2 mr-1">
             <button
               onClick={onExport}
@@ -103,25 +106,30 @@ export const Header: React.FC<HeaderProps> = ({
       </div>
 
       {/* Mobile nav strip */}
-      <div className="flex md:hidden items-center justify-around border-t border-neutral-200 px-2 py-1.5 bg-neutral-50 text-xs">
-        <button
-          onClick={() => setActiveTab('syllabus')}
-          className={`px-2 py-1 rounded font-medium ${activeTab === 'syllabus' ? 'text-neutral-900 bg-white shadow-xs' : 'text-neutral-600'}`}
-        >
-          Syllabus Index
-        </button>
-        <button
-          onClick={() => setActiveTab('planner')}
-          className={`px-2 py-1 rounded font-medium ${activeTab === 'planner' ? 'text-neutral-900 bg-white shadow-xs' : 'text-neutral-600'}`}
-        >
-          Daily Plan
-        </button>
-        <button
-          onClick={() => setActiveTab('checklist')}
-          className={`px-2 py-1 rounded font-medium ${activeTab === 'checklist' ? 'text-neutral-900 bg-white shadow-xs' : 'text-neutral-600'}`}
-        >
-          5-Area Roadmap
-        </button>
+      <div className="flex md:hidden items-center justify-between border-t border-neutral-200 px-3 py-1.5 bg-neutral-50 text-xs">
+        <div className="flex items-center gap-1">
+          <button
+            onClick={() => setActiveTab('syllabus')}
+            className={`px-2.5 py-1 rounded font-medium ${activeTab === 'syllabus' ? 'text-neutral-900 bg-white shadow-xs' : 'text-neutral-600'}`}
+          >
+            Syllabus
+          </button>
+          <button
+            onClick={() => setActiveTab('planner')}
+            className={`px-2.5 py-1 rounded font-medium ${activeTab === 'planner' ? 'text-neutral-900 bg-white shadow-xs' : 'text-neutral-600'}`}
+          >
+            Daily Plan
+          </button>
+          <button
+            onClick={() => setActiveTab('checklist')}
+            className={`px-2.5 py-1 rounded font-medium ${activeTab === 'checklist' ? 'text-neutral-900 bg-white shadow-xs' : 'text-neutral-600'}`}
+          >
+            Roadmap
+          </button>
+        </div>
+        <div className="sm:hidden">
+          <PWAInstallButton variant="mobile-nav" />
+        </div>
       </div>
     </header>
   );

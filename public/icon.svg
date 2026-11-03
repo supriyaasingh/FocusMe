@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="fmBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f2937" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <!-- Background squircle -->
+  <rect width="512" height="512" rx="112" fill="url(#fmBg)"/>
+  <rect width="512" height="512" rx="112" fill="url(#glow)"/>
+  <rect x="8" y="8" width="496" height="496" rx="104" fill="none" stroke="#ffffff" stroke-opacity="0.12" stroke-width="4"/>
+
+  <!-- Focus Reticle Accent -->
+  <circle cx="256" cy="256" r="168" fill="none" stroke="#38bdf8" stroke-width="6" stroke-opacity="0.3" stroke-dasharray="16 12"/>
+  <circle cx="256" cy="256" r="136" fill="none" stroke="#60a5fa" stroke-width="3" stroke-opacity="0.4"/>
+  <circle cx="256" cy="256" r="8" fill="#38bdf8"/>
+
+  <!-- Center Monogram "FM" -->
+  <text x="256" y="292" 
+        text-anchor="middle" 
+        fill="#ffffff" 
+        font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
+        font-size="148" 
+        font-weight="900" 
+        letter-spacing="-6">FM</text>
+  
+  <!-- Subtle focus tick indicators -->
+  <line x1="256" y1="56" x2="256" y2="80" stroke="#38bdf8" stroke-width="6" stroke-linecap="round"/>
+  <line x1="256" y1="432" x2="256" y2="456" stroke="#38bdf8" stroke-width="6" stroke-linecap="round"/>
+  <line x1="56" y1="256" x2="80" y2="256" stroke="#38bdf8" stroke-width="6" stroke-linecap="round"/>
+  <line x1="432" y1="256" x2="456" y2="256" stroke="#38bdf8" stroke-width="6" stroke-linecap="round"/>
+</svg>
