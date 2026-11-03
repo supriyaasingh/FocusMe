@@ -1,0 +1,6 @@
+{
+  "name": "FocusMe — Personal Learning Index",
+  "description": "Personal learning index, career roadmap, syllabus tracker, and daily study planner.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
